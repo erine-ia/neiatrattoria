@@ -10,6 +10,7 @@
 }
 body{
     width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 header{
@@ -19,6 +20,9 @@ header{
     /* background-color: #bf4d245b; */
     background-color:#0401019e;
     
+}
+ul li{
+    list-style: none;
 }
 
 .container{
@@ -233,15 +237,122 @@ video{
 }
 /* FIM  da divisória com garfo e tomate cereja */ 
 
+
+/* pratos menu */
+
+
+
+.galeria-pratos{
+  display:grid;
+  align-items: center;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: 
+  'p1 p2'
+  'p3 p4';
+  
+
+}
+
+.pratos h2{
+    color:#bc0303;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+}
+
+.prato{
+    width: 100%;
+    text-align: center;
+    margin: 0%;
+}
+
+
+
+
+.prato img{
+    width: 100%;
+    margin: 0;
+    position: relative;
+    padding: 0;
+    height: 100%;
+
+}
+
+.prato_1{
+    grid-area: p1;
+    width: 100%;
+
+}
+.prato_2{
+    grid-area: p2;
+}
+.prato_3{
+    grid-area: p3;
+}
+.prato_4{
+    grid-area: p4;
+}
+/* fim pratos menu */
+
 /* bebidas menu */
 
 .bebidas{
     display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 'bebida-img bebida-txt ';
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-family: 1.3em;
+
+}
+
+.txt-menu-bebidas{
+    grid-area: bebida-txt;
+
+}
+
+.txt-menu-bebidas h2{
+    color:#bc0303;
+    font-size: 2em;
+}
+
+.txt-menu-bebidas p, .item-list-menu{
+    width: 70%;
+    text-align: justify;
+    padding: 0 5%;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+.item-list-menu{
+    text-align: left;
+    color:#7abc3a;
+    font-weight: 700;
+    line-height: 50px;
     
+
+}
+
+.item-list-menu::before{
+    content: '>  ';
+    color:#bc0303;
+    font-size: 1.3em;
 }
 
 
+.vinho-img{
+    grid-area:  bebida-img;
+    width: 100%;
+
+}
+
+.vinho-img img{
+    width: 100%;
+}
+
 /* FIM da parte bebidas menu */
+
+
+
 
 
 
@@ -344,5 +455,22 @@ figcaption{
     grid-area: sob3;
 }
 
+.btn-cardapio{
+    margin: 5% auto;
+    
+}
 
 
+/* contato */
+
+
+
+
+
+.copy{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background-color: #121318;
+    color: #bf4e24;
+}
