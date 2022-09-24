@@ -19,24 +19,29 @@
                 <source src="" type="video/ogg">
             </video>
         </div>
+        <div class="btn-aberto"></div>
         <nav class="menu">
             <div class="container">
                 <div class="menu-logo">
-                    <img class="logo" src="../img/logos/logo_menor.png" alt="">
-                </div>
+                    <img class="logo" src="../img/logos/logo_menor.png" alt=""> 
+                </div>  
                 <div class="menu-itens">
                     <a href="#sobre" class="menu-item">Nossa Casa</a>
                     <a href="#cardapio" class="menu-item">Cardápio</a>
                     <a href="#contato" class="menu-item">Contato</a>
                     <a href="" class="menu-item">Reserva</a>
-                    <button class="btn menu-btn"><a href="">Delivery</a></button>
+                    <button class="btn menu-btn btn-delivery"><a href="">Delivery</a></button>
                 </div>
             </div>
     
         </nav>
         <div class="marca">
-            <img src="../img/logos/img-header.png" alt="">
-            <h1>NeiaSpaghetti</h1>
+<!-- 
+            <img class="logo-desktop" src="../img/logos/img-header.png" alt="">
+            <h1>NeiaSpaghetti</h1> -->
+
+            <img src="../img/logos/logomobile.png"  class="logo-mobile" alt="">
+
         </div>
    </header>
 
@@ -46,8 +51,10 @@
                 
                 <img class= "img-left" src="../img/icones/gravatinha.png" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit porro quo est amet sed incidunt ducimus, nesciunt exercitationem ex temporibus molestiae. Consequuntur libero facilis repellendus sunt, quaerat beatae deleniti neque!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora repellat ut id nostrum unde eos repudiandae mollitia quidem at minus consectetur dolorum veniam accusantium quo cum amet, qui quaerat odio! <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ipsum, eaque enim sunt excepturi quo sit rem quam sapiente minus dolorem impedit optio illum quas et? Commodi rerum sed quod.</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus quod laboriosam quo nam voluptatibus! Incidunt explicabo officia porro delectus alias? Non quod libero nesciunt aliquam cum nemo consectetur, deserunt nulla.</p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora repellat ut id nostrum unde eos repudiandae mollitia quidem at minus consectetur dolorum veniam accusantium quo cum amet, qui quaerat odio! <br><span class="tirar-mobile">
+                    <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ipsum, eaque enim sunt excepturi quo sit rem quam sapiente minus dolorem impedit optio illum quas et? Commodi rerum sed quod.</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus quod laboriosam quo nam voluptatibus! Incidunt explicabo officia porro delectus alias? Non quod libero nesciunt aliquam cum nemo consectetur, deserunt nulla.</p>
+                </span>
 
                 <button class="btn ">Faça uma Visita</button>
 
@@ -58,7 +65,9 @@
 
             </div>
             <div class="img-sobre">
-                <img src="../img/ambiente/restaurante.jpg" alt="">
+                <img class="maior" src="../img/ambiente/restaurante.jpg" alt="">
+
+                <img class="menor" src="../img/ambiente/restaurante_menor.jpg" alt="">
 
             </div>
 
@@ -201,6 +210,6 @@
    
     </footer>
     <div class="copy">2022 -Todos os Direitos Reservados</div>
-   
+   <script src="../js/script.js"></script>
 </body>
 </html>

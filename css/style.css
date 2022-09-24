@@ -1,3 +1,20 @@
+:root{
+    /* cores */
+    --global-cor-laranja: #bf4e24;
+    --global-cor-vermelho:#bc0303;
+    --global-cor-verde:#7a8c3a;
+    --global-cor-menu-mobile:#d9b89c;
+    --global-bg-transparente: #0401019e;
+    --global-cor-fonte-menu: #f2eeeb;
+    --global-bg-menu-divisor:  #121318;
+
+    --global-font-h1: 'Mackless';
+    --global-font-h2: 'anthony';
+}
+
+
+
+
 @font-face {
     font-family: 'Mackless';
     src: url("../fontes/Mackless-Script.otf");
@@ -8,9 +25,14 @@
     font-family: 'anthony';
     src: url("../fontes//Anthony\ Hunter\ Italic.otf");
 }
+html{
+    width: 100%;
+
+}
 body{
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 
 }
 header{
@@ -32,6 +54,12 @@ ul li{
 
 }
 
+.video-header{
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+}
+
 
 
 video{
@@ -43,8 +71,16 @@ video{
     transform: translate(0%, -50%);  
     visibility: visible; 
     opacity: 1; 
-    height: auto;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center center;
 }
+
+.video-header{
+    width: 100%;
+    height: 100vh;
+}
+
 
 .menu{
 
@@ -52,13 +88,14 @@ video{
    background-color: #0401019e;
     width: auto; 
     height: auto;
+    top: 0;
     
 
 }
 
 .logo{
     
-    display: block;
+    display: none;
     visibility:hidden;
     
   
@@ -110,9 +147,9 @@ video{
 .marca{
     width: 50%;
     text-align: center;
-    height: 500px;
+    height:200px;
     position: relative;
-    top:-10%;
+    top:-70%;
     padding-bottom:-20px;
 }
 .marca img{
@@ -138,6 +175,15 @@ video{
 
     font-display: swap;
 
+}
+
+/* essa logo inutiliza i,g, h3 e h1 da classe .marca */
+.logo-mobile{
+    width: 100%;
+    position: relative;
+    object-fit: contain;
+    object-position: 50%;
+    
 }
 
 
@@ -199,13 +245,18 @@ video{
     width: 100%;
 
 }
+
+.img-sobre .menor{
+    display: none;
+
+}
 /* FIM de Sobre nós */
 
 
 /* divisória com garfo e tomate cereja */
 .divisor{
     clear: both;  
-    background-image: url('../img/bg/bg_cabecalho_menor.jpg');
+    background-image: url('../img/bg/bg_cabecalho_menor.jpg' );
     background-repeat: no-repeat;
     background-position: center ;
     background-color: #121318;
@@ -215,24 +266,28 @@ video{
     margin-top: 10%;
     padding: 2% 0;
     z-index: 99999;
+    text-align: center;
+    vertical-align: middle;
   
   
 }
 
 .divisor h2{
-    background-color: #121318a6;
+    background-color: #121318a6; 
+    display: block;
     text-align: center;
     height: 100%;
     padding: 2% 0;
     margin: 0 auto;
-    width: 70%;
+    width: 100%;
     position:relative;
     font-size: 4em;
     color: wheat;
     font-family:  'anthony';
     font-weight: 200;
-    bottom: .4em;
+    bottom: 25%; 
     text-shadow: #121318 1px 2px 2px 2px;
+
   
 }
 /* FIM  da divisória com garfo e tomate cereja */ 
@@ -507,4 +562,545 @@ figcaption{
     color: #bf4e24;
 }
 
+
+
+
+
+
+@media screen  and (max-width:500px){
+    
+    header{
+        height: 100vh;
+  
+        
+    }
+
+    
+
+    .video-header{
+        width: 100%;
+        height: 100vh;
+    }
+
+    video{
+        height: 100vh;
+        object-fit: cover;
+
+    }
+    nav{
+        left: -100%;
+        height: 0%;
+        width: 50%;
+        position:relative;
+        text-align: right;
+    }
+    
+    .logo{display: none;}
+    
+    
+    
+    .menu-itens{
+        width: 100%;
+        margin: 0;
+        display:none; 
+        position: fixed;
+        text-align: center;
+        padding: 20% 0;
+        left: 100%;  
+        top:0%;
+        background-color:var(--global-cor-verde);
+        display: grid;
+        transition: all 1s ease;
+       
+    }
+    
+    .menu-itens-abrir{
+        width: 100%;
+        margin: 0;
+        display:visible; 
+        position: fixed;
+        text-align: center;
+        padding: 20% 0;
+        top:0%;
+        background-color:var(--global-cor-verde);
+        display: grid;
+        left: 00%; 
+        transition: all 1s ease;
+    }
+    
+    .menu-item{
+        width:100%;
+        padding: 3% 0;
+        font-size: 1.2em;
+        margin: 0;
+        color:var(--global-cor-fonte-menu)
+    }
+    
+    .menu-item:hover{
+        background-color: var(--global-cor-vermelho);
+    }
+    .btn{
+        background-color: transparent;
+        padding: 1% 5%;
+        border: solid #bf4e24 2px;
+    
+    }
+    
+    .btn, .menu-btn a{
+        color: #bf4e24;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.1em;
+    }
+    
+    .btn-fechado{
+        width:100%;
+        background-color:transparent;
+        position:absolute;
+        height: 65px;
+        top:2%;
+        background-image: url('../img/icones/garfo-e-faca-em-cruz.png');
+        background-repeat:no-repeat;
+        background-position: 15px;
+        z-index: 999999;
+    }
+    
+    .btn-aberto{
+        width:100%;
+        background-color:transparent;
+        position:absolute;
+        height: 65px;
+        top:2%;
+        background-image: url('../img/icones/menu-horizontal.png');
+        background-repeat:no-repeat;
+        background-position: 15px;
+        z-index: 999999;
+    }
+
+    .marca{
+       
+        width: 100%;
+        top: -100%;
+        padding-top: 0;
+        height: 80%;
+        margin: 0 auto;
+        /* position: absolute; */
+        text-align: center;
+    }
+
+    .marca h1{
+        font-size: 4em;
+        object-fit: contain;
+        right: 10%;
+     
+    }
+
+    .marca img{
+       object-fit: contain;
+       position: relative;
+       top:40%;
+       right: -5%;
+    }
+
+    .sobre{
+         display: block;
+         height: 100%;
+         text-align: center;
+         width: 100%;
+        
+    
+    }
+
+    .txt-sobre{
+        width: 100%;
+     
+       
+
+    }
+    .txt-sobre h3{
+        text-align: center;
+      
+    }
+
+    .txt-sobre span{
+        display: none;
+    }
+
+    .img-sobre .maior{
+        display: none;
+
+    }
+
+
+    .menu-cardapio{
+        margin-top: 5%;
+    }
+
+    .menu-cardapio p{
+        display: none;
+    }
+    .item-list-menu{
+        line-height: normal;
+        font-size: 0.5em;
+        display: none;
+    }
+
+    .divisor h2{
+ 
+        top:-.1em;
+
+
+    }
+    .sobremesa h2{
+        font-size: 1.3em;
+        color:white;
+    }
+
+    .contatos{
+        display:block;
+        padding: 5% 0;
+        text-align: center;
+     }
+     
+     .formulario{
+         width: 100%;
+         margin:0 auto;
+     
+     }
+     
+     .formulario input, .formulario textarea{ 
+         padding: 2%;
+         width: 80%;
+         margin-bottom: 2%;
+         border:solid .5px #bf4e24;
+     }
+     .logo-desktop{
+        width: 90%;
+     }
+     
+     
+     .redes{
+         margin-top: 5%;
+         padding: 5% 0;
+     
+        
+     }
+
+ 
+
+
+    
+}
+
+
+@media screen and (min-width:501px) and (max-width:780px) {
+
+    
+    .video-header{
+        width: 100%;
+        height: 100vh;
+    }
+
+    video{
+        height: 100vh;
+        object-fit: cover;
+
+    }
+    nav{
+        left: -100%;
+        height: 0%;
+        width: 50%;
+        position:relative;
+        text-align: right;
+    }
+    .logo{display: none;}
+    
+    
+    
+    .menu-itens{
+        width: 100%;
+        margin: 0;
+        display:none; 
+        position: fixed;
+        text-align: center;
+        padding: 20% 0;
+        left: 100%; 
+        top: 0%;
+        background-color:var(--global-cor-verde);
+        display: grid;
+        transition: all 1s ease;
+       
+    }
+    
+    .menu-itens-abrir{
+        width: 100%;
+        margin: 0;
+        display:visible; 
+        position: fixed;
+        text-align: center;
+        padding: 20% 0;
+        top:0%;
+        background-color:var(--global-cor-verde);
+        display: grid;
+        left: 0;
+        transition: all 1s ease;
+    }
+    
+    .menu-item{
+        width:100%;
+        padding: 3% 0;
+        font-size: 1.2em;
+        margin: 0;
+        color:var(--global-cor-fonte-menu)
+    }
+    
+    .menu-item:hover{
+        background-color: var(--global-cor-vermelho);
+    }
+    .btn{
+        background-color: transparent;
+        padding: 1% 5%;
+        border: solid #bf4e24 2px;
+    
+    }
+    
+    .btn, .menu-btn a{
+        color: #bf4e24;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.1em;
+    }
+    
+    .btn-fechado{
+        width:100%;
+        background-color:transparent;
+        position:absolute;
+        height: 65px;
+        top:2%;
+        background-image: url('../img/icones/garfo-e-faca-em-cruz.png');
+        background-repeat:no-repeat;
+        background-position: 15px;
+        z-index: 999999;
+    }
+    
+    .btn-aberto{
+        width:100%;
+        background-color:transparent;
+        position:absolute;
+        height: 65px;
+        top:2%;
+        background-image: url('../img/icones/menu-horizontal.png');
+        background-repeat:no-repeat;
+        background-position: 15px;
+        z-index: 999999;
+    }
+    
+
+    .marca{
+       
+        width: 100%;
+        padding-top: 0;
+        height: 90%;
+        margin: 0 auto;
+        top: -25%;
+        position: absolute;
+        text-align: center;
+       
+    }
+
+    .logo-mobile{
+        width: 70%;
+    }
+
+    .marca h1{
+        font-size: 7em;
+        object-fit: contain;
+        right: 20%;
+     
+    }
+
+    .marca img{
+       object-fit: contain;
+       position: relative;
+       top:59%;
+       right: -5%;
+    }
+    .sobre{
+        margin-bottom: 0;
+        padding-bottom: 0%;
+        height: 100%;
+    }
+
+
+
+    .img-sobre .menor{
+        display: none;
+
+    }
+
+
+    .menu-cardapio{
+        margin-top: 0%;
+        
+    }
+
+    .menu-cardapio p{
+        display: block;
+        font-weight: 100;
+        font-size: 0.9em;
+    }
+    .item-list-menu{
+        display: none;
+    }
+
+    .divisor h2{
+        top:-.2em;
+
+
+    }
+    .sobremesa h2{
+        font-size: 1.3em;
+        color:white;
+    }
+
+    .contatos{
+        display:flex;
+        padding: 5% 0;
+        text-align: center;
+     }
+     
+     .formulario{
+         width: 100%;
+         margin:0 auto;
+     
+     }
+     
+     .formulario input, .formulario textarea{ 
+         padding: 2%;
+         width: 80%;
+         margin-bottom: 2%;
+         border:solid .5px #bf4e24;
+     }
+     .logo-desktop{
+        width: 90%;
+     }
+     
+     
+     .redes{
+         margin-top: 5%;
+         padding: 5% 0;
+     
+        
+     }
+}
+
+@media screen and (min-width:770px) and (max-width:992px) {
+    .video-header{
+        width: 100%;
+        height: 100vh;
+    }
+
+    video{
+        height: 100vh;
+        object-fit: cover;
+
+    }
+     nav{
+        position: relative;
+        top:-100%;
+        width: 100%;
+    
+        
+     }
+
+     .menu-itens{
+        width: 100%;
+     }
+
+     .btn-delivery{
+        float: right;
+     }
+
+
+     .marca{
+        top:-100%;
+     }
+
+     .marca img{
+    top: 10%;
+ 
+     }
+
+     .marca h1{
+        font-size: 8em;
+     }
+
+     .sobre{
+        height: 100%;
+        margin-top: 0%;
+      
+     }
+
+     .item-list-menu{
+        display: none;
+    }
+
+
+    
+}
+
+@media screen and (max-width:993px){
+    .video-header{
+        width: 100%;
+        height: 100vh;
+    }
+
+    video{
+        height: 100vh;
+        object-fit: cover;
+
+    }
+    .img-sobre .menor{
+        display: none;
+
+    }
+
+    .sobre{
+        height: 100%;
+    }
+
+    .item-list-menu{
+       line-height: normal;
+    }
+
+
+}
+
+@media screen and (min-width: 994px) and (max-width:1200px){
+
+    .marca{
+       
+        width: 100%;
+        padding-top: 0;
+        height: 90%;
+        margin: 0 auto;
+        top: 10%;
+        position: absolute;
+        text-align: center;
+       
+    }
+
+    .logo-mobile{
+        width: 70%;
+    }
+    .sobre{
+        height: 100%;
+    }
+    .item-list-menu{
+        line-height: normal;
+     }
+ 
+
+    
+}
 
